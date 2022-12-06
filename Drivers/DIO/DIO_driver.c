@@ -4,54 +4,54 @@
 void PinMode(uint8_t pin,uint8_t mode){
     if(pin <= PA7){
         switch(pin){
-            case PA0:   mode?(mode==1?(A->DDR_REG.pin0=PIN_HIGH):(A->DDR_REG.pin0=PIN_LOW,A->PORT_REG.pin0=PIN_HIGH)):(A->DDR_REG.pin0=PIN_HIGH);break;
-            case PA1:   mode?(mode==1?(A->DDR_REG.pin1=PIN_HIGH):(A->DDR_REG.pin1=PIN_LOW,A->PORT_REG.pin1=PIN_HIGH)):(A->DDR_REG.pin1=PIN_HIGH);break;
-            case PA2:   mode?(mode==1?(A->DDR_REG.pin2=PIN_HIGH):(A->DDR_REG.pin2=PIN_LOW,A->PORT_REG.pin2=PIN_HIGH)):(A->DDR_REG.pin2=PIN_HIGH);break;
-            case PA3:   mode?(mode==1?(A->DDR_REG.pin3=PIN_HIGH):(A->DDR_REG.pin3=PIN_LOW,A->PORT_REG.pin3=PIN_HIGH)):(A->DDR_REG.pin3=PIN_HIGH);break;
-            case PA4:   mode?(mode==1?(A->DDR_REG.pin4=PIN_HIGH):(A->DDR_REG.pin4=PIN_LOW,A->PORT_REG.pin4=PIN_HIGH)):(A->DDR_REG.pin4=PIN_HIGH);break;
-            case PA5:   mode?(mode==1?(A->DDR_REG.pin5=PIN_HIGH):(A->DDR_REG.pin5=PIN_LOW,A->PORT_REG.pin5=PIN_HIGH)):(A->DDR_REG.pin5=PIN_HIGH);break;
-            case PA6:   mode?(mode==1?(A->DDR_REG.pin6=PIN_HIGH):(A->DDR_REG.pin6=PIN_LOW,A->PORT_REG.pin6=PIN_HIGH)):(A->DDR_REG.pin6=PIN_HIGH);break;
-            case PA7:   mode?(mode==1?(A->DDR_REG.pin7=PIN_HIGH):(A->DDR_REG.pin7=PIN_LOW,A->PORT_REG.pin7=PIN_HIGH)):(A->DDR_REG.pin7=PIN_HIGH);break;
-            default:    /* Do nth */
+            case PA0:   mode?(mode==1?(A->DDR_REG.pin0=PIN_HIGH):(A->DDR_REG.pin0=PIN_LOW,A->PORT_REG.pin0=PIN_HIGH)):(A->DDR_REG.pin0=PIN_LOW);break;
+            case PA1:   mode?(mode==1?(A->DDR_REG.pin1=PIN_HIGH):(A->DDR_REG.pin1=PIN_LOW,A->PORT_REG.pin1=PIN_HIGH)):(A->DDR_REG.pin1=PIN_LOW);break;
+            case PA2:   mode?(mode==1?(A->DDR_REG.pin2=PIN_HIGH):(A->DDR_REG.pin2=PIN_LOW,A->PORT_REG.pin2=PIN_HIGH)):(A->DDR_REG.pin2=PIN_LOW);break;
+            case PA3:   mode?(mode==1?(A->DDR_REG.pin3=PIN_HIGH):(A->DDR_REG.pin3=PIN_LOW,A->PORT_REG.pin3=PIN_HIGH)):(A->DDR_REG.pin3=PIN_LOW);break;
+            case PA4:   mode?(mode==1?(A->DDR_REG.pin4=PIN_HIGH):(A->DDR_REG.pin4=PIN_LOW,A->PORT_REG.pin4=PIN_HIGH)):(A->DDR_REG.pin4=PIN_LOW);break;
+            case PA5:   mode?(mode==1?(A->DDR_REG.pin5=PIN_HIGH):(A->DDR_REG.pin5=PIN_LOW,A->PORT_REG.pin5=PIN_HIGH)):(A->DDR_REG.pin5=PIN_LOW);break;
+            case PA6:   mode?(mode==1?(A->DDR_REG.pin6=PIN_HIGH):(A->DDR_REG.pin6=PIN_LOW,A->PORT_REG.pin6=PIN_HIGH)):(A->DDR_REG.pin6=PIN_LOW);break;
+            case PA7:   mode?(mode==1?(A->DDR_REG.pin7=PIN_HIGH):(A->DDR_REG.pin7=PIN_LOW,A->PORT_REG.pin7=PIN_HIGH)):(A->DDR_REG.pin7=PIN_LOW);break;
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PA7 && pin <= PB7){
         switch(pin){
-            case PB0:   mode?(mode==1?(B->DDR_REG.pin0=PIN_HIGH):(B->DDR_REG.pin0=PIN_LOW,B->PORT_REG.pin0=PIN_HIGH)):(B->DDR_REG.pin0=PIN_HIGH);break;
-            case PB1:   mode?(mode==1?(B->DDR_REG.pin1=PIN_HIGH):(B->DDR_REG.pin1=PIN_LOW,B->PORT_REG.pin1=PIN_HIGH)):(B->DDR_REG.pin1=PIN_HIGH);break;
-            case PB2:   mode?(mode==1?(B->DDR_REG.pin2=PIN_HIGH):(B->DDR_REG.pin2=PIN_LOW,B->PORT_REG.pin2=PIN_HIGH)):(B->DDR_REG.pin2=PIN_HIGH);break;
-            case PB3:   mode?(mode==1?(B->DDR_REG.pin3=PIN_HIGH):(B->DDR_REG.pin3=PIN_LOW,B->PORT_REG.pin3=PIN_HIGH)):(B->DDR_REG.pin3=PIN_HIGH);break;
-            case PB4:   mode?(mode==1?(B->DDR_REG.pin4=PIN_HIGH):(B->DDR_REG.pin4=PIN_LOW,B->PORT_REG.pin4=PIN_HIGH)):(B->DDR_REG.pin4=PIN_HIGH);break;
-            case PB5:   mode?(mode==1?(B->DDR_REG.pin5=PIN_HIGH):(B->DDR_REG.pin5=PIN_LOW,B->PORT_REG.pin5=PIN_HIGH)):(B->DDR_REG.pin5=PIN_HIGH);break;
-            case PB6:   mode?(mode==1?(B->DDR_REG.pin6=PIN_HIGH):(B->DDR_REG.pin6=PIN_LOW,B->PORT_REG.pin6=PIN_HIGH)):(B->DDR_REG.pin6=PIN_HIGH);break;
-            case PB7:   mode?(mode==1?(B->DDR_REG.pin7=PIN_HIGH):(B->DDR_REG.pin7=PIN_LOW,B->PORT_REG.pin7=PIN_HIGH)):(B->DDR_REG.pin7=PIN_HIGH);break;
-            default:    /* Do nth */
+            case PB0:   mode?(mode==1?(B->DDR_REG.pin0=PIN_HIGH):(B->DDR_REG.pin0=PIN_LOW,B->PORT_REG.pin0=PIN_HIGH)):(B->DDR_REG.pin0=PIN_LOW);break;
+            case PB1:   mode?(mode==1?(B->DDR_REG.pin1=PIN_HIGH):(B->DDR_REG.pin1=PIN_LOW,B->PORT_REG.pin1=PIN_HIGH)):(B->DDR_REG.pin1=PIN_LOW);break;
+            case PB2:   mode?(mode==1?(B->DDR_REG.pin2=PIN_HIGH):(B->DDR_REG.pin2=PIN_LOW,B->PORT_REG.pin2=PIN_HIGH)):(B->DDR_REG.pin2=PIN_LOW);break;
+            case PB3:   mode?(mode==1?(B->DDR_REG.pin3=PIN_HIGH):(B->DDR_REG.pin3=PIN_LOW,B->PORT_REG.pin3=PIN_HIGH)):(B->DDR_REG.pin3=PIN_LOW);break;
+            case PB4:   mode?(mode==1?(B->DDR_REG.pin4=PIN_HIGH):(B->DDR_REG.pin4=PIN_LOW,B->PORT_REG.pin4=PIN_HIGH)):(B->DDR_REG.pin4=PIN_LOW);break;
+            case PB5:   mode?(mode==1?(B->DDR_REG.pin5=PIN_HIGH):(B->DDR_REG.pin5=PIN_LOW,B->PORT_REG.pin5=PIN_HIGH)):(B->DDR_REG.pin5=PIN_LOW);break;
+            case PB6:   mode?(mode==1?(B->DDR_REG.pin6=PIN_HIGH):(B->DDR_REG.pin6=PIN_LOW,B->PORT_REG.pin6=PIN_HIGH)):(B->DDR_REG.pin6=PIN_LOW);break;
+            case PB7:   mode?(mode==1?(B->DDR_REG.pin7=PIN_HIGH):(B->DDR_REG.pin7=PIN_LOW,B->PORT_REG.pin7=PIN_HIGH)):(B->DDR_REG.pin7=PIN_LOW);break;
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PB7 && pin <= PC7){
         switch(pin){
-            case PC0:   mode?(mode==1?(C->DDR_REG.pin0=PIN_HIGH):(C->DDR_REG.pin0=PIN_LOW,C->PORT_REG.pin0=PIN_HIGH)):(C->DDR_REG.pin0=PIN_HIGH);break;
-            case PC1:   mode?(mode==1?(C->DDR_REG.pin1=PIN_HIGH):(C->DDR_REG.pin1=PIN_LOW,C->PORT_REG.pin1=PIN_HIGH)):(C->DDR_REG.pin1=PIN_HIGH);break;
-            case PC2:   mode?(mode==1?(C->DDR_REG.pin2=PIN_HIGH):(C->DDR_REG.pin2=PIN_LOW,C->PORT_REG.pin2=PIN_HIGH)):(C->DDR_REG.pin2=PIN_HIGH);break;
-            case PC3:   mode?(mode==1?(C->DDR_REG.pin3=PIN_HIGH):(C->DDR_REG.pin3=PIN_LOW,C->PORT_REG.pin3=PIN_HIGH)):(C->DDR_REG.pin3=PIN_HIGH);break;
-            case PC4:   mode?(mode==1?(C->DDR_REG.pin4=PIN_HIGH):(C->DDR_REG.pin4=PIN_LOW,C->PORT_REG.pin4=PIN_HIGH)):(C->DDR_REG.pin4=PIN_HIGH);break;
-            case PC5:   mode?(mode==1?(C->DDR_REG.pin5=PIN_HIGH):(C->DDR_REG.pin5=PIN_LOW,C->PORT_REG.pin5=PIN_HIGH)):(C->DDR_REG.pin5=PIN_HIGH);break;
-            case PC6:   mode?(mode==1?(C->DDR_REG.pin6=PIN_HIGH):(C->DDR_REG.pin6=PIN_LOW,C->PORT_REG.pin6=PIN_HIGH)):(C->DDR_REG.pin6=PIN_HIGH);break;
-            case PC7:   mode?(mode==1?(C->DDR_REG.pin7=PIN_HIGH):(C->DDR_REG.pin7=PIN_LOW,C->PORT_REG.pin7=PIN_HIGH)):(C->DDR_REG.pin7=PIN_HIGH);break;
-            default:    /* Do nth */
+            case PC0:   mode?(mode==1?(C->DDR_REG.pin0=PIN_HIGH):(C->DDR_REG.pin0=PIN_LOW,C->PORT_REG.pin0=PIN_HIGH)):(C->DDR_REG.pin0=PIN_LOW);break;
+            case PC1:   mode?(mode==1?(C->DDR_REG.pin1=PIN_HIGH):(C->DDR_REG.pin1=PIN_LOW,C->PORT_REG.pin1=PIN_HIGH)):(C->DDR_REG.pin1=PIN_LOW);break;
+            case PC2:   mode?(mode==1?(C->DDR_REG.pin2=PIN_HIGH):(C->DDR_REG.pin2=PIN_LOW,C->PORT_REG.pin2=PIN_HIGH)):(C->DDR_REG.pin2=PIN_LOW);break;
+            case PC3:   mode?(mode==1?(C->DDR_REG.pin3=PIN_HIGH):(C->DDR_REG.pin3=PIN_LOW,C->PORT_REG.pin3=PIN_HIGH)):(C->DDR_REG.pin3=PIN_LOW);break;
+            case PC4:   mode?(mode==1?(C->DDR_REG.pin4=PIN_HIGH):(C->DDR_REG.pin4=PIN_LOW,C->PORT_REG.pin4=PIN_HIGH)):(C->DDR_REG.pin4=PIN_LOW);break;
+            case PC5:   mode?(mode==1?(C->DDR_REG.pin5=PIN_HIGH):(C->DDR_REG.pin5=PIN_LOW,C->PORT_REG.pin5=PIN_HIGH)):(C->DDR_REG.pin5=PIN_LOW);break;
+            case PC6:   mode?(mode==1?(C->DDR_REG.pin6=PIN_HIGH):(C->DDR_REG.pin6=PIN_LOW,C->PORT_REG.pin6=PIN_HIGH)):(C->DDR_REG.pin6=PIN_LOW);break;
+            case PC7:   mode?(mode==1?(C->DDR_REG.pin7=PIN_HIGH):(C->DDR_REG.pin7=PIN_LOW,C->PORT_REG.pin7=PIN_HIGH)):(C->DDR_REG.pin7=PIN_LOW);break;
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PC7 && pin <= PD7){
         switch(pin){
-            case PD0:   mode?(mode==1?(D->DDR_REG.pin0=PIN_HIGH):(D->DDR_REG.pin0=PIN_LOW,D->PORT_REG.pin0=PIN_HIGH)):(D->DDR_REG.pin0=PIN_HIGH);break;
-            case PD1:   mode?(mode==1?(D->DDR_REG.pin1=PIN_HIGH):(D->DDR_REG.pin1=PIN_LOW,D->PORT_REG.pin1=PIN_HIGH)):(D->DDR_REG.pin1=PIN_HIGH);break;
-            case PD2:   mode?(mode==1?(D->DDR_REG.pin2=PIN_HIGH):(D->DDR_REG.pin2=PIN_LOW,D->PORT_REG.pin2=PIN_HIGH)):(D->DDR_REG.pin2=PIN_HIGH);break;
-            case PD3:   mode?(mode==1?(D->DDR_REG.pin3=PIN_HIGH):(D->DDR_REG.pin3=PIN_LOW,D->PORT_REG.pin3=PIN_HIGH)):(D->DDR_REG.pin3=PIN_HIGH);break;
-            case PD4:   mode?(mode==1?(D->DDR_REG.pin4=PIN_HIGH):(D->DDR_REG.pin4=PIN_LOW,D->PORT_REG.pin4=PIN_HIGH)):(D->DDR_REG.pin4=PIN_HIGH);break;
-            case PD5:   mode?(mode==1?(D->DDR_REG.pin5=PIN_HIGH):(D->DDR_REG.pin5=PIN_LOW,D->PORT_REG.pin5=PIN_HIGH)):(D->DDR_REG.pin5=PIN_HIGH);break;
-            case PD6:   mode?(mode==1?(D->DDR_REG.pin6=PIN_HIGH):(D->DDR_REG.pin6=PIN_LOW,D->PORT_REG.pin6=PIN_HIGH)):(D->DDR_REG.pin6=PIN_HIGH);break;
-            case PD7:   mode?(mode==1?(D->DDR_REG.pin7=PIN_HIGH):(D->DDR_REG.pin7=PIN_LOW,D->PORT_REG.pin7=PIN_HIGH)):(D->DDR_REG.pin7=PIN_HIGH);break;
-            default:    /* Do nth */
+            case PD0:   mode?(mode==1?(D->DDR_REG.pin0=PIN_HIGH):(D->DDR_REG.pin0=PIN_LOW,D->PORT_REG.pin0=PIN_HIGH)):(D->DDR_REG.pin0=PIN_LOW);break;
+            case PD1:   mode?(mode==1?(D->DDR_REG.pin1=PIN_HIGH):(D->DDR_REG.pin1=PIN_LOW,D->PORT_REG.pin1=PIN_HIGH)):(D->DDR_REG.pin1=PIN_LOW);break;
+            case PD2:   mode?(mode==1?(D->DDR_REG.pin2=PIN_HIGH):(D->DDR_REG.pin2=PIN_LOW,D->PORT_REG.pin2=PIN_HIGH)):(D->DDR_REG.pin2=PIN_LOW);break;
+            case PD3:   mode?(mode==1?(D->DDR_REG.pin3=PIN_HIGH):(D->DDR_REG.pin3=PIN_LOW,D->PORT_REG.pin3=PIN_HIGH)):(D->DDR_REG.pin3=PIN_LOW);break;
+            case PD4:   mode?(mode==1?(D->DDR_REG.pin4=PIN_HIGH):(D->DDR_REG.pin4=PIN_LOW,D->PORT_REG.pin4=PIN_HIGH)):(D->DDR_REG.pin4=PIN_LOW);break;
+            case PD5:   mode?(mode==1?(D->DDR_REG.pin5=PIN_HIGH):(D->DDR_REG.pin5=PIN_LOW,D->PORT_REG.pin5=PIN_HIGH)):(D->DDR_REG.pin5=PIN_LOW);break;
+            case PD6:   mode?(mode==1?(D->DDR_REG.pin6=PIN_HIGH):(D->DDR_REG.pin6=PIN_LOW,D->PORT_REG.pin6=PIN_HIGH)):(D->DDR_REG.pin6=PIN_LOW);break;
+            case PD7:   mode?(mode==1?(D->DDR_REG.pin7=PIN_HIGH):(D->DDR_REG.pin7=PIN_LOW,D->PORT_REG.pin7=PIN_HIGH)):(D->DDR_REG.pin7=PIN_LOW);break;
+            default:    /* Do nth */ break;
         }
     }
 
@@ -68,7 +68,7 @@ void WritePin(uint8_t pin,uint8_t value){
             case PA5:   A->PORT_REG.pin5=value;break;
             case PA6:   A->PORT_REG.pin6=value;break;
             case PA7:   A->PORT_REG.pin7=value;break;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PA7 && pin <= PB7){
@@ -81,7 +81,7 @@ void WritePin(uint8_t pin,uint8_t value){
             case PB5:   B->PORT_REG.pin5=value;break;
             case PB6:   B->PORT_REG.pin6=value;break;
             case PB7:   B->PORT_REG.pin7=value;break;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PB7 && pin <= PC7){
@@ -94,7 +94,7 @@ void WritePin(uint8_t pin,uint8_t value){
             case PC5:   C->PORT_REG.pin5=value;break;
             case PC6:   C->PORT_REG.pin6=value;break;
             case PC7:   C->PORT_REG.pin7=value;break;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PC7 && pin <= PD7){
@@ -107,7 +107,7 @@ void WritePin(uint8_t pin,uint8_t value){
             case PD5:   D->PORT_REG.pin5=value;break;
             case PD6:   D->PORT_REG.pin6=value;break;
             case PD7:   D->PORT_REG.pin7=value;break;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
 }
@@ -124,7 +124,7 @@ uint8_t ReadPin(uint8_t pin){
             case PA5:   val=A->PIN_REG.pin5;
             case PA6:   val=A->PIN_REG.pin6;
             case PA7:   val=A->PIN_REG.pin7;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PA7 && pin <= PB7){
@@ -137,7 +137,7 @@ uint8_t ReadPin(uint8_t pin){
             case PB5:   val=B->PIN_REG.pin5;
             case PB6:   val=B->PIN_REG.pin6;
             case PB7:   val=B->PIN_REG.pin7;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PB7 && pin <= PC7){
@@ -150,7 +150,7 @@ uint8_t ReadPin(uint8_t pin){
             case PC5:   val=C->PIN_REG.pin5;
             case PC6:   val=C->PIN_REG.pin6;
             case PC7:   val=C->PIN_REG.pin7;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
     else if(pin > PC7 && pin <= PD7){
@@ -163,7 +163,7 @@ uint8_t ReadPin(uint8_t pin){
             case PD5:   val=D->PIN_REG.pin5;
             case PD6:   val=D->PIN_REG.pin6;
             case PD7:   val=D->PIN_REG.pin7;
-            default:    /* Do nth */
+            default:    /* Do nth */ break;
         }
     }
 }
@@ -174,7 +174,7 @@ void PortMode(uint8_t port,uint8_t mode){
         case PORTB:     mode?(mode==1?(B->DDR_REG.DDR=PORT_HIGH):(B->DDR_REG.DDR=PORT_LOW,B->PORT_REG.PORT=PORT_HIGH)):(B->DDR_REG.DDR=PORT_LOW);break;
         case PORTC:     mode?(mode==1?(C->DDR_REG.DDR=PORT_HIGH):(C->DDR_REG.DDR=PORT_LOW,C->PORT_REG.PORT=PORT_HIGH)):(C->DDR_REG.DDR=PORT_LOW);break;
         case PORTD:     mode?(mode==1?(D->DDR_REG.DDR=PORT_HIGH):(D->DDR_REG.DDR=PORT_LOW,D->PORT_REG.PORT=PORT_HIGH)):(D->DDR_REG.DDR=PORT_LOW);break;
-        default: /*Do nth*/
+        default: /*Do nth*/ break;
     }
 }
 
@@ -184,7 +184,7 @@ void WritePort(uint8_t port,uint8_t value){
         case PORTB:     B->PORT_REG.PORT=value;break;
         case PORTC:     C->PORT_REG.PORT=value;break;
         case PORTD:     D->PORT_REG.PORT=value;break;
-        default: /*Do nth*/
+        default: /*Do nth*/ break;
     }
 }
 
@@ -195,6 +195,6 @@ uint8_t ReadPort(uint8_t port){
         case PORTB:     val=B->PIN_REG.PIN;break;
         case PORTC:     val=C->PIN_REG.PIN;break;
         case PORTD:     val=D->PIN_REG.PIN;break;
-        default: /*Do nth*/
+        default: /*Do nth*/ break;
     }
 }
