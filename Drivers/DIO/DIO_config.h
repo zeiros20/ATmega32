@@ -23,14 +23,41 @@
 #define PORTC 2
 #define PORTD 3
 
-#define PIN0 0
-#define PIN1 0
-#define PIN2 0
-#define PIN3 0
-#define PIN4 0
-#define PIN5 0
-#define PIN6 0
-#define PIN7 0
+#define PA0 0
+#define PA1 1
+#define PA2 2
+#define PA3 3
+#define PA4 4
+#define PA5 5
+#define PA6 6
+#define PA7 7
+
+#define PB0 10
+#define PB1 11
+#define PB2 12
+#define PB3 13
+#define PB4 14
+#define PB5 15
+#define PB6 16
+#define PB7 17
+
+#define PC0 16
+#define PC1 17
+#define PC2 18
+#define PC3 19
+#define PC4 20
+#define PC5 21
+#define PC6 22
+#define PC7 23
+
+#define PD0 24
+#define PD1 25
+#define PD2 26
+#define PD3 27
+#define PD4 28
+#define PD5 29
+#define PD6 30
+#define PD7 31
 
 
 //Mapping I/O
@@ -93,13 +120,13 @@ void PinMode(uint8_t pin,uint8_t mode);
 
 void WritePin(uint8_t pin,uint8_t value);
 
-void ReadPin(uint8_t pin);
+uint8_t ReadPin(uint8_t pin);
 
 void PortMode(uint8_t port,uint8_t mode);
 
 void WritePort(uint8_t port,uint8_t value);
 
-void ReadPort(uint8_t port);
+uint8_t ReadPort(uint8_t port);
 
 
 
