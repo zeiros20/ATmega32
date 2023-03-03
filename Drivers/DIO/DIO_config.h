@@ -32,14 +32,14 @@
 #define PA6 6
 #define PA7 7
 
-#define PB0 10
-#define PB1 11
-#define PB2 12
-#define PB3 13
-#define PB4 14
-#define PB5 15
-#define PB6 16
-#define PB7 17
+#define PB0 8
+#define PB1 9
+#define PB2 10
+#define PB3 11
+#define PB4 12
+#define PB5 13
+#define PB6 14
+#define PB7 15
 
 #define PC0 16
 #define PC1 17
